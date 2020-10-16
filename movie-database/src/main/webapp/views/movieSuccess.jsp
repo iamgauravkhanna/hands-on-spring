@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,7 +15,7 @@
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
 
-<title>Movie Listing</title>
+<title>Movie Success</title>
 </head>
 <body>
 
@@ -36,10 +34,6 @@
 		integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
 		crossorigin="anonymous"></script>
 
-	<p></p>
-	<p></p>
-	<p></p>
-	<p></p>
 	<div class="container">
 
 		<ul class="nav">
@@ -51,34 +45,14 @@
 		</ul>
 
 	</div>
-	<div class="container md-5">
 
-		<h1>Welcome to Movie Database</h1>
-		<p></p>
+	<div class="container">
 
-		<table class="table">
-			<thead>
-				<tr>
-					<th scope="col">S.No</th>
-					<th scope="col">Name</th>
-					<th scope="col">Release Year</th>
-					<th scope="col">Genere</th>
-					<th scope="col">Director</th>
-				</tr>
-			</thead>
-			<tbody>
-			<c:forEach items="${movie}" var="movieObj" >
-				<tr>
-					<th scope="row">${movieObj.id }</th>
-					<td>${movieObj.name }</td>
-					<td>${movieObj.year }</td>
-					<td>${movieObj.genere }</td>
-					<td>${movieObj.director }</td>
-				</tr>
-			</c:forEach>
-			</tbody>
+		<h1>Movie Added Successfully !!</h1>
 
-		</table>
 	</div>
+
+
 </body>
+
 </html>

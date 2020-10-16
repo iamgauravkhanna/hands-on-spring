@@ -1,7 +1,5 @@
 package com.example.movie.database.model;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,11 +8,11 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "movie")
-public class Movie {
+public class Movie implements Comparable< Movie >{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	private Integer id;
 
 	private String name;
 
@@ -23,13 +21,13 @@ public class Movie {
 	private String genere;
 
 	private String director;
+	
+	public Integer getId() {
+		return id;
+	}
 
-	public Movie(String name, int year, String genere, String director, List<String> cast) {
-		super();
-		this.name = name;
-		this.year = year;
-		this.genere = genere;
-		this.director = director;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -68,6 +66,11 @@ public class Movie {
 	public String toString() {
 		return "Movie [id=" + id + ", name=" + name + ", year=" + year + ", genere=" + genere + ", director=" + director
 				+ "]";
+	}
+	
+	@Override
+	public int compareTo(Movie movie) {
+		return getId().compareTo(movie.getId());
 	}
 
 }

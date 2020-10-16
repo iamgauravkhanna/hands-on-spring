@@ -17,7 +17,7 @@
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
 
-<title>Movie Listing</title>
+<title>Error Page</title>
 </head>
 <body>
 
@@ -53,32 +53,10 @@
 	</div>
 	<div class="container md-5">
 
-		<h1>Welcome to Movie Database</h1>
+		<h1>Error...!</h1>
 		<p></p>
-
-		<table class="table">
-			<thead>
-				<tr>
-					<th scope="col">S.No</th>
-					<th scope="col">Name</th>
-					<th scope="col">Release Year</th>
-					<th scope="col">Genere</th>
-					<th scope="col">Director</th>
-				</tr>
-			</thead>
-			<tbody>
-			<c:forEach items="${movie}" var="movieObj" >
-				<tr>
-					<th scope="row">${movieObj.id }</th>
-					<td>${movieObj.name }</td>
-					<td>${movieObj.year }</td>
-					<td>${movieObj.genere }</td>
-					<td>${movieObj.director }</td>
-				</tr>
-			</c:forEach>
-			</tbody>
-
-		</table>
+			<h3><c:out value="${m.msg}" default="default value of c:out"/>
+			</h3>
 	</div>
 </body>
 </html>

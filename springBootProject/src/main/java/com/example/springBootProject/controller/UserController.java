@@ -33,7 +33,8 @@ public class UserController {
 	public String addUser(@ModelAttribute("user") User user) {
 
 		userService.add(user);
-		return "user";
+		
+		return "movieSuccess";
 	}
 
 }

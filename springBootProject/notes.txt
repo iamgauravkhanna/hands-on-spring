@@ -1,10 +1,3 @@
-Modules :
-
-Spring Web
-Spring Boot
-Spring Security
-JPA
-
 Setup of project : maven-archetype-mvc
 
 add tomcat as runtime server as library
@@ -19,19 +12,17 @@ Model
 
 ModelAndView
 
-view to controller
+data from view to controller
 
-@RequestParam
+@RequestParam -- parameters in request
 
-RequestMethod
+RequestMethod -- GET, POST, POST, DELETE
 
 JSP Expression Language | JSTL
 
 Handling Forms
 
 @ModelAttribute
-
-Spring ORM
 
 Redirect View
 
@@ -41,14 +32,47 @@ Serving Static Files | JS, CSS, Images
 
 File Uploading | Multipart using Commons IO
 
+@Component
+
+@RestController
+
+@RequestBody
+
+@ResponseBody
+
 @PathVariable
 
-@ExceptionHandler
+@ExceptionHandler - Handing Exception Occured
 
 Centralized Exception | @ControllerAdvice
 
 Spring Interceptor | HandlerInterceptor
 
+Use Lombok for @Getter, @Setter, @ToString
+
+JDBC
+
+Hibernate - HibernateTemplate
+
+Spring ORM
+
+Spring JDBC - DAO, DAOImpl, JdbcTemplate, NamedParameterJdbcTemplate, RowMapper 
+
+Spring Data JPA - JPARepository / CrudRepository, Mapping
+
+Spring Data MongoDB
+
+Spring Security - WebMvcConfigurer, WebSecurityConfigurerAdapter
+
+########################################################################
+
+List of Annotations :
+
+
+@Slf4j
+@Component
+
+########################################################################
 
 Project : Contact Manager
 
@@ -60,11 +84,18 @@ Show Contact
 Add Contact
 Logout
 
-Concepts :
+########################################################################
 
+Modules :
+
+Spring Web
 Spring Boot
-Spring MVC
-Hibernate / JPA
-Thymeleaf / JSP
+Spring Data JPA
+Spring JDBC
+Spring MongoDB
 Spring Security
+
 MySQL
+MongoDB
+Redis
+Kafka
