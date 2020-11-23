@@ -38,6 +38,13 @@ Logout
 
 ########################################################################
 
+recharge
+payment
+tpapi
+portal
+
+########################################################################
+
 List of Annotations/Class/Interfaces :
 
 Setup of project : maven-archetype-mvc
@@ -133,6 +140,8 @@ AbstractAnnotationConfigDispatcherServletInitializer
 WebMvcConfigurerAdapter
 
 HandlerInterceptorAdapter
+
+AbstractSecurityWebApplicationInitializer
 
 @order
 
