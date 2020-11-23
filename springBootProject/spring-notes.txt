@@ -1,0 +1,143 @@
+Prerequisites :
+
+Core Java
+Servlet & JSP 
+JDBC
+Hibernate
+
+########################################################################
+
+Spring Modules :
+
+Spring Core
+Spring Web - MVC, Web-Socket, Web-Portlet etc.
+Spring Boot
+Spring Data JPA
+Spring JDBC
+Spring MongoDB
+Spring Security
+
+Extra Modules :
+
+MySQL
+MongoDB
+Redis
+Kafka
+
+########################################################################
+
+Project : Contact Manager
+
+Home
+Sign Up
+Login
+Profile
+Show Contact
+Add Contact
+Logout
+
+########################################################################
+
+List of Annotations/Class/Interfaces :
+
+Setup of project : maven-archetype-mvc
+
+add tomcat as runtime server as library
+
+controller to view
+
+@Controller
+
+@RequestMapping
+
+@Autowired
+
+Model
+
+ModelAndView
+
+data from view to controller
+
+@RequestParam -- parameters in request
+
+RequestMethod -- GET, POST, POST, DELETE
+
+@Valid
+
+@Validated
+
+@JsonInclude
+
+@JsonIgnoreProperties
+
+ResponseEntity
+
+JSP Expression Language | JSTL
+
+Handling Forms
+
+@ModelAttribute
+
+Redirect View
+
+Handling Error | BindingResult
+
+Serving Static Files | JS, CSS, Images
+
+File Uploading | Multipart using Commons IO
+
+@Component
+
+@RestController
+
+@RequestBody
+
+@ResponseBody
+
+@ResponseStatus
+
+@PathVariable
+
+@ExceptionHandler - Handing Exception Occured
+
+Centralized Exception | @ControllerAdvice
+
+Spring Interceptor | HandlerInterceptor
+
+Use Lombok for @Getter, @Setter, @ToString
+
+JDBC
+
+Hibernate - HibernateTemplate
+
+Spring ORM
+
+Spring JDBC - DAO, DAOImpl, JdbcTemplate, NamedParameterJdbcTemplate, RowMapper 
+
+Spring Data JPA - JPARepository / CrudRepository, Mapping
+
+Spring Data MongoDB
+
+Spring Security - WebMvcConfigurer, WebSecurityConfigurerAdapter
+
+@Slf4j
+
+@Component
+
+@EnableWebSecurity = @EnableWebMVCSecurity + Extra features. That’s why @EnableWebMVCSecurity Annotation is deprecated in Spring 4.x Framework.
+
+@EnableWebMVCSecurity
+
+AbstractAnnotationConfigDispatcherServletInitializer
+
+WebMvcConfigurerAdapter
+
+HandlerInterceptorAdapter
+
+@order
+
+JSONObject
+
+JSONArray
+
+HttpServletRequest
