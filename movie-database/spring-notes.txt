@@ -51,8 +51,6 @@ Setup of project : maven-archetype-mvc
 
 add tomcat as runtime server as library
 
-controller to view
-
 @Controller
 
 @RequestMapping
@@ -63,21 +61,9 @@ Model
 
 ModelAndView
 
-data from view to controller
-
 @RequestParam -- parameters in request
 
 RequestMethod -- GET, POST, POST, DELETE
-
-@Valid
-
-@Validated
-
-@JsonInclude
-
-@JsonIgnoreProperties
-
-ResponseEntity
 
 JSP Expression Language | JSTL
 
@@ -111,7 +97,7 @@ Centralized Exception | @ControllerAdvice
 
 Spring Interceptor | HandlerInterceptor
 
-Use Lombok for @Getter, @Setter, @ToString
+Use Lombok for @Getter, @Setter, @Data
 
 JDBC
 
@@ -128,8 +114,6 @@ Spring Data MongoDB
 Spring Security - WebMvcConfigurer, WebSecurityConfigurerAdapter
 
 @Slf4j
-
-@Component
 
 @EnableWebSecurity = @EnableWebMVCSecurity + Extra features. That’s why @EnableWebMVCSecurity Annotation is deprecated in Spring 4.x Framework.
 
@@ -150,3 +134,23 @@ JSONObject
 JSONArray
 
 HttpServletRequest
+
+@SpringBootApplication
+
+@EnableJpaAuditing
+
+@ComponentScan
+
+@Service
+
+@Qualifier
+
+@GetMapping
+
+@Valid
+
+@Validated
+
+Jackson - @JsonInclude, @JsonIgnoreProperties
+
+ResponseEntity

@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.movie.database.model.Movie;
-import com.example.movie.database.repository.MovieRepository;
 import com.example.movie.database.service.MovieService;
 
 @RestController("/api")
@@ -26,6 +27,13 @@ public class MovieRestController {
 	public List<Movie> getMovies() {
 
 		return this.movieService.getMovie();
+
+	}
+	
+	@GetMapping("/movie-listing")
+	public ResponseEntity<Object> getMoviesListing() {
+
+		return new ResponseEntity<Object>(this.movieService.getMovie(), HttpStatus.ACCEPTED);
 
 	}
 
