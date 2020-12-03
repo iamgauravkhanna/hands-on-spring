@@ -1,14 +1,25 @@
 package com.example.movie.database.model;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "movie")
-public class Movie implements Comparable< Movie >{
+public class Movie implements Comparable<Movie> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,7 +32,20 @@ public class Movie implements Comparable< Movie >{
 	private String genere;
 
 	private String director;
-	
+
+//	@OneToMany(targetEntity = Person.class, cascade = CascadeType.ALL)
+//	@JoinColumn(name="movie_id",referencedColumnName = "id")
+//	private List<Person> person ;
+
+//	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+//	@JoinTable(name = "movie_cast", joinColumns = { @JoinColumn(name = "movie_id") }, inverseJoinColumns = {
+//			@JoinColumn(name = "person_id") })
+//	private Set<Person> person = new HashSet<>();
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -62,12 +86,6 @@ public class Movie implements Comparable< Movie >{
 		this.director = director;
 	}
 
-	@Override
-	public String toString() {
-		return "Movie [id=" + id + ", name=" + name + ", year=" + year + ", genere=" + genere + ", director=" + director
-				+ "]";
-	}
-	
 	@Override
 	public int compareTo(Movie movie) {
 		return getId().compareTo(movie.getId());

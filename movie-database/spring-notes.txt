@@ -10,19 +10,22 @@ Hibernate
 Spring Modules :
 
 Spring Core
-Spring Web - MVC, Web-Socket, Web-Portlet etc.
+Spring Web
 Spring Boot
 Spring Data JPA
 Spring JDBC
 Spring MongoDB
 Spring Security
 
+########################################################################
+
 Extra Modules :
 
-MySQL
-MongoDB
-Redis
-Kafka
+Integration with MySQL
+Integration with MongoDB
+Integration with Redis
+Integration with Kafka
+Implementation of Cache
 
 ########################################################################
 
@@ -35,13 +38,6 @@ Profile
 Show Contact
 Add Contact
 Logout
-
-########################################################################
-
-recharge
-payment
-tpapi
-portal
 
 ########################################################################
 
@@ -97,7 +93,7 @@ Centralized Exception | @ControllerAdvice
 
 Spring Interceptor | HandlerInterceptor
 
-Use Lombok for @Getter, @Setter, @Data
+Use Lombok for @Getter, @Setter, @Data, @Builder
 
 JDBC
 
@@ -105,9 +101,13 @@ Hibernate - HibernateTemplate
 
 Spring ORM
 
-Spring JDBC - DAO, DAOImpl, JdbcTemplate, NamedParameterJdbcTemplate, RowMapper 
+Spring Data *
+
+Spring Data JDBC - DAO, DAOImpl, JdbcTemplate, NamedParameterJdbcTemplate, RowMapper 
 
 Spring Data JPA - JPARepository / CrudRepository, Mapping
+
+Spring Data JDBC vs Spring Data JPA
 
 Spring Data MongoDB
 
@@ -120,12 +120,15 @@ Spring Security - WebMvcConfigurer, WebSecurityConfigurerAdapter
 @EnableWebMVCSecurity
 
 AbstractAnnotationConfigDispatcherServletInitializer
+WebApplicationInitializer
+AbstractSecurityWebApplicationInitializer
+ApplicationContextInitializer
+AbstractAnnotationConfigDispatcherServletInitializer
 
 WebMvcConfigurerAdapter
 
 HandlerInterceptorAdapter
 
-AbstractSecurityWebApplicationInitializer
 
 @order
 
@@ -154,3 +157,21 @@ HttpServletRequest
 Jackson - @JsonInclude, @JsonIgnoreProperties
 
 ResponseEntity
+
+@EnableJpaRepositories
+
+HTTPClient vs AsyncHTTP Client vs RestTemplate vs WebClient (Blocking vs. Non-Blocking client)
+
+DTO (Data transfer object)
+
+########################################################################
+
+TODO :
+
+CastAndCrew Section using Joins
+Implementation of TV Shows section using MongoDB
+Redis
+Cacheable
+Kafka Messaging 
+Security
+RestClientUtil postman alternative

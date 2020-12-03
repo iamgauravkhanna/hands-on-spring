@@ -40,8 +40,15 @@ public class MovieRestController {
 	@GetMapping("/movie/{id}")
 	public Optional<Movie> getMovieById(@PathVariable("id") int id) {
 
-		return this.movieService.getMovieById(id);
+		return movieService.getMovieById(id);
 
+	}
+	
+	@GetMapping("/movieByName/{name}")
+	public List<Movie> getMovieByName(@PathVariable("name") String name){
+		
+		return movieService.getMovieByName(name);
+		
 	}
 
 	@PostMapping("/movie")
