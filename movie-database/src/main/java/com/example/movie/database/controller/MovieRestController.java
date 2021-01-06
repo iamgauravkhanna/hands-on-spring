@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.movie.database.model.Movie;
@@ -44,6 +46,13 @@ public class MovieRestController {
 
 	}
 	
+	@GetMapping("/movie/by-id")
+	public Optional<Movie> getMovieByIdUsingParam(@RequestParam int id){
+		
+		return movieService.getMovieById(id);
+		
+	}
+	
 	@GetMapping("/movieByName/{name}")
 	public List<Movie> getMovieByName(@PathVariable("name") String name){
 		
@@ -71,6 +80,12 @@ public class MovieRestController {
 
 		movieService.deleteMovie(id);
 
+	}
+	
+	@GetMapping("/greeting")
+	public ResponseEntity<String> greeting(@RequestHeader("accept-language") String language) {
+	    // code that uses the language variable
+	    return new ResponseEntity<String>(language, HttpStatus.OK);
 	}
 
 }

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,7 +25,7 @@
 
 		<h3>Add New Movie</h3>
 
-		<form action="postMovie" method="post">
+		<form action="postMovie" method="post" enctype="multipart/form-data">
 
 			<div class="form-group">
 				<label for="exampleInputEmail1">Name</label> <input type="text"
@@ -34,21 +34,30 @@
 			</div>
 
 			<div class="form-group">
-				<label for="exampleInputEmail1">Release Year</label> <input type="text"
-					class="form-control" name="year" id="name"
+				<label for="exampleInputEmail1">Release Year</label> <input
+					type="text" class="form-control" name="year" id="name"
 					aria-describedby="emailHelp" placeholder="Enter Release Year">
 			</div>
-			
+
 			<div class="form-group">
 				<label for="exampleInputEmail1">Genere</label> <input type="text"
 					class="form-control" name="genere" id="name"
 					aria-describedby="emailHelp" placeholder="Enter Genere">
 			</div>
-			
+
 			<div class="form-group">
 				<label for="exampleInputEmail1">Director</label> <input type="text"
 					class="form-control" name="director" id="name"
 					aria-describedby="emailHelp" placeholder="Enter Director">
+			</div>
+
+			<div class="form-group">
+				<table>
+					<tr>
+						<td><form:label path="file">Select a file to upload</form:label></td>
+						<td><input type="file" name="file" /></td>
+					</tr>
+				</table>
 			</div>
 
 			<button type="submit" class="btn btn-primary">Save</button>

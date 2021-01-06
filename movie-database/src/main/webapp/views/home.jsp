@@ -56,17 +56,17 @@
 
 	</div>
 
-<div class="container p-3">
+	<div class="container p-3">
 
- <div class="card-columns">
+		<div class="card-columns">
 
-	<c:forEach items="${movie}" var="movieObj">
+			<c:forEach items="${movie}" var="movieObj">
 
 				<div class="card bg-light text-dark" style="width: 18rem;">
 
 					<img class="card-img-top"
 						src="https://cdn.dribbble.com/users/2264632/screenshots/6708631/final.gif"
-						alt="Card image cap" width="100" height="200" >
+						alt="Card image cap" width="100" height="200">
 
 					<div class="card-body">
 
@@ -81,13 +81,13 @@
 
 				</div>
 
-			
 
-	</c:forEach>
-	
+
+			</c:forEach>
+
+		</div>
+
 	</div>
-	
-		</div>	
 
 
 </body>

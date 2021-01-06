@@ -1,6 +1,8 @@
 package com.example.movie.database.service;
 
-import antlr.collections.List;
+import java.util.List;
+
+import com.example.movie.database.model.WebSeries;
 
 public interface WebSeriesService {
 
