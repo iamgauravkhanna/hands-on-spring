@@ -17,7 +17,7 @@ public class WebSeriesServiceImpl implements WebSeriesService{
 	@Override
 	public List<WebSeries> getWebSeries() {
 		
-		List<WebSeries> listofseries = webSeriesRepository.findAll();
+		// List<WebSeries> listofseries = webSeriesRepository.findAll();
 		
 //		for(int i = 0; i < listofseries.size(); i++) {
 //            

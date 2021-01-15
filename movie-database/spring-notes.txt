@@ -17,7 +17,7 @@ Spring Modules :
 Spring Core
 Spring Web
 Spring Boot
-Spring Data JPA
+Spring JPA
 Spring JDBC
 Spring MongoDB
 Spring Security
@@ -52,6 +52,48 @@ batch stream
 client stream
 tms
 bpapi
+
+########################################################################
+
+Project : Movie Databse
+
+Home
+Show Movies List
+Add Movie Form
+Edit Movie Form
+Sign Up
+Login
+Profile
+Logout
+Show Web Series List
+Add Web Series Form
+Edit Web Series Form
+Add Rating
+Edit Rating
+OTP Verification
+Email Verification
+
+########################################################################
+
+TODO :
+
+CastAndCrew Section using MySQL Joins
+Implementation of TV Shows section using MongoDB
+Redis
+Cacheable (https://www.baeldung.com/spring-cache-tutorial)
+Kafka Messaging 
+Spring Security ( JWT, AUTH, hMAC, Authenticating Users - In-Memory, JDBC, LDAP )
+RestClientUtil ( postman alternative )
+Batch Jobs
+Stream
+
+########################################################################
+
+OPEN QUESTIONS
+
+Why implements Serializable ?
+Why DTO ?
+Why AllProductsFetcher ?
 
 ########################################################################
 
@@ -109,15 +151,13 @@ File Uploading | Multipart using Commons IO | Save on Disk vs Save in DB
 
 @PostMapping
 
-@ExceptionHandler - Handing Exception Occured
-
 Centralized Exception | @ControllerAdvice
+
+@ExceptionHandler - Handing Exception Occured
 
 Spring Interceptor | HandlerInterceptor
 
-Use Lombok for @Getter, @Setter, @Data, @Builder, @ToString, @AllArgsConstructor, @NoArgsConstructor
-
-JDBC
+Use Lombok for @Getter, @Setter, @Data, @Builder, @ToString, @AllArgsConstructor, @NoArgsConstructor - plugin needed for IDEs
 
 Hibernate - HibernateTemplate
 
@@ -133,7 +173,9 @@ Spring Data MongoDB
 
 @Slf4j - Logging
 
-Spring Security - WebMvcConfigurer, WebSecurityConfigurerAdapter
+Spring Security - WebMvcConfigurer, WebSecurityConfigurerAdapter, HTTP Authentication, Sign In, Logout, Anonymous Login, Browser Back, Remember Me
+
+
 
 @EnableWebSecurity = @EnableWebMVCSecurity + Extra features. That’s why @EnableWebMVCSecurity Annotation is deprecated in Spring 4.x Framework.
 
@@ -151,15 +193,15 @@ HandlerInterceptorAdapter
 
 @order
 
-JSONObject
-
-JSONArray
+JSONObject, JSONArray
 
 HttpServletRequest
 
 @SpringBootApplication
 
 @EnableJpaAuditing
+
+@EnableJpaRepositories
 
 @Service
 
@@ -170,8 +212,6 @@ HttpServletRequest
 Jackson - @JsonInclude, @JsonIgnoreProperties
 
 ResponseEntity
-
-@EnableJpaRepositories
 
 HTTPClient vs AsyncHTTP Client vs RestTemplate vs WebClient (Blocking vs. Non-Blocking client)
 
@@ -187,50 +227,24 @@ MultiValueMap
 
 @CacheConfig
 
+@PropertySource
+
+@Value
+
+@RunWith
+
+@MockBean
+
+@ImportResource
+
+@WebMvcTest
+
 Swagger - @Api, @ApiOperation, @ApiModelProperty
 
 Java 8 - Stream, Filter, Collect, Sorting
 
-########################################################################
+DefaultErrorAttributes
 
-Project : Contact Manager
+CompletableFuture
 
-Home
-Sign Up
-Login
-Profile
-Show Contact
-Add Contact
-Logout
-
-########################################################################
-
-TODO :
-
-CastAndCrew Section using MySQL Joins
-
-Implementation of TV Shows section using MongoDB
-
-Redis
-
-Cacheable (https://www.baeldung.com/spring-cache-tutorial)
-
-Kafka Messaging 
-
-Spring Security ( JWT, DB , AUTH )
-
-RestClientUtil ( postman alternative )
-
-Batch Jobs
-
-Stream
-
-OTP Verification
-
-########################################################################
-
-OPEN QUESTIONS
-
-Why implements Serializable ?
-Why DTO ?
-Why AllProductsFetcher ?
+AuthenticationSuccessHandler

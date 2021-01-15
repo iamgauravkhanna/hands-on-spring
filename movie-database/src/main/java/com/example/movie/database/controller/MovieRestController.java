@@ -13,54 +13,56 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.movie.database.model.Movie;
 import com.example.movie.database.service.MovieService;
 
-@RestController("/api")
+@RestController
+@RequestMapping("/api/movie")
 public class MovieRestController {
 
 	@Autowired
 	MovieService movieService;
 
-	@GetMapping("/movie")
+	@GetMapping("/")
 	public List<Movie> getMovies() {
 
 		return this.movieService.getMovie();
 
 	}
 	
-	@GetMapping("/movie-listing")
+	@GetMapping("/listing")
 	public ResponseEntity<Object> getMoviesListing() {
 
 		return new ResponseEntity<Object>(this.movieService.getMovie(), HttpStatus.ACCEPTED);
 
 	}
 
-	@GetMapping("/movie/{id}")
+	@GetMapping("/{id}")
 	public Optional<Movie> getMovieById(@PathVariable("id") int id) {
 
 		return movieService.getMovieById(id);
 
 	}
 	
-	@GetMapping("/movie/by-id")
+	@GetMapping("/by-id")
 	public Optional<Movie> getMovieByIdUsingParam(@RequestParam int id){
 		
 		return movieService.getMovieById(id);
 		
 	}
 	
-	@GetMapping("/movieByName/{name}")
+	@GetMapping("/findByName/{name}")
 	public List<Movie> getMovieByName(@PathVariable("name") String name){
 		
 		return movieService.getMovieByName(name);
 		
 	}
 
-	@PostMapping("/movie")
+	@PostMapping("/")
 	public Movie createMovie(@RequestBody Movie movie) {
 
 		System.out.println(movie.toString());
@@ -68,14 +70,14 @@ public class MovieRestController {
 		return this.movieService.saveMovie(movie);
 	}
 
-	@PutMapping("/movie")
+	@PutMapping("/")
 	public Movie updateMovie(@RequestBody Movie movie) {
 
 		return this.movieService.saveMovie(movie);
 
 	}
 
-	@DeleteMapping("/movie/{id}")
+	@DeleteMapping("/{id}")
 	public void deleteMovie(@PathVariable("id") int id) {
 
 		movieService.deleteMovie(id);

@@ -16,7 +16,7 @@ import com.example.movie.database.model.Person;
 import com.example.movie.database.service.PersonService;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/api/person")
 public class PersonRestController {
 	
 	@Autowired
